@@ -1,0 +1,38 @@
+{% set pageTitle = "Book a peer review" %}
+{% set pageDescription = "book a discov peer review is etc" %}
+{% set pageSection = "Service assurance" %}
+{% set dateUpdated = "February 2023" %}
+{% set backlog_issue_id = "" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+    {% include "service-assurance/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+    <div class="app-index-navigation app-u-hide-desktop govuk-!-margin-bottom-3">
+        <details class="dfeuk-details dfeuk-expander">
+            <summary class="dfeuk-details__summary">
+                <span class="dfeuk-details__summary-text ">
+        Section menu
+      </span>
+            </summary>
+            <div class="dfeuk-details__text  govuk-!-margin-left-5">
+                {% include "includes/_side-nav.njk" %}
+            </div>
+        </details>
+    </div>
+
+    <h2 class="govuk-heading-m">When to book</h2>
+
+<p>Something</p>
+
+<h2 class="govuk-heading-m">Who should attend</h2>
+
+<div class="govuk-inset-text">
+  It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+</div>
+
+{% endblock %}

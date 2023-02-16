@@ -44,6 +44,37 @@
   }
 ] %}
 
+
+{% set assurance = [
+   {
+    title: "Service assurance overview",
+    url: "/service-assurance"
+  }
+  ] %}
+
+{% set discoverypr = [
+   {
+    title: "Discovery peer review",
+    url: "/service-assurance/discovery"
+  },  {
+    title: "Book a peer review",
+    url: "/service-assurance/discovery/book"
+  }
+  ] %}
+
+
+{# 
+{% set assessments = [
+   {
+    title: "Alpha",
+    url: "/service-assurance/discovery"
+  },  {
+    title: "Beta",
+    url: "/service-assurance/discovery/book"
+  }
+  ] %} #}
+
+
 <nav class="app-side-nav">
 
   {%- if pageSection == "Service Standard" %}
@@ -56,5 +87,37 @@
       {% endfor %}
     </ul>
   {% endif %}
+
+  {%- if pageSection == "Service assurance" %}
+
+   <ul class="dfeuk-list app-side-nav__list">
+      {% for item in assurance %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
+          <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Discovery peer reviews</h2>
+    <ul class="dfeuk-list app-side-nav__list">
+      {% for item in discoverypr %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
+          <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {# <h2 class="app-side-nav__heading">Service assessments</h2>
+    <ul class="dfeuk-list app-side-nav__list">
+      {% for item in assessments %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
+          <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul> #}
+    
+  {% endif %}
+
+
 
 </nav>

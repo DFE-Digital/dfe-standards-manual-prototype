@@ -1,0 +1,52 @@
+{% set pageTitle = "Discovery peer review" %}
+{% set pageDescription = "Find out what a discovery peer review is, how to book one and what to prepare." %}
+{% set pageSection = "Service assurance" %}
+{% set dateUpdated = "February 2023" %}
+{% set backlog_issue_id = "" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+    {% include "service-assurance/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+    <div class="app-index-navigation app-u-hide-desktop govuk-!-margin-bottom-3">
+        <details class="dfeuk-details dfeuk-expander">
+            <summary class="dfeuk-details__summary">
+                <span class="dfeuk-details__summary-text ">
+        Section menu
+      </span>
+            </summary>
+            <div class="dfeuk-details__text  govuk-!-margin-left-5">
+                {% include "includes/_side-nav.njk" %}
+            </div>
+        </details>
+    </div>
+<h2 class="govuk-heading-m">What it is</h2>
+
+<p>A discovery peer review is a 2 hour informal review of a team's work in the discovery phase. 
+
+It's a way to get feedback and recommendations at the end of this phase.
+
+It's not an assessment. There are no assessments at discovery. 
+
+<h2 class="govuk-heading-m">Why have one</h2>
+
+<h3 class="govuk-heading-s">What a team gets out of having a review</h3>
+
+<h2 class="govuk-heading-m">What to expect </h2>
+
+<h3 class="govuk-heading-s">One to 2 days before</h3>
+
+<h3 class="govuk-heading-s">On the day</h3>
+
+<h3 class="govuk-heading-s">After the review</h3>
+
+<h2 class="govuk-heading-m">What to prepare</h2>
+</p>
+
+
+
+{% endblock %}
