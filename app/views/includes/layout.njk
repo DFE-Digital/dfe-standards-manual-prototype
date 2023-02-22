@@ -96,7 +96,8 @@
               <a href="https://user-research.education.gov.uk/" class="" target="_blank" id="">ReOps Manual</a>
             </li>
             <li>
-              <a href="https://apply-the-service-standard.education.gov.uk/" class=" active"  target="_blank" id=""><span class="govuk-visually-hidden">Visit the </span>Standards Manual</a>
+              <a href="https://apply-the-service-standard.education.gov.uk/" class=" active"  target="_blank" id="">
+                <span class="govuk-visually-hidden">Visit the </span>Standards Manual</a>
             </li>
             <li>
               <a href="https://design-histories.education.gov.uk/" class="" target="_blank" id="">Design Histories</a>
@@ -140,17 +141,17 @@
     {% include "includes/_footer.njk" %}
 
     {% block pageScripts %}{% endblock %}
+    
+    <script>
+      if (typeof window.GOVUK === 'undefined') 
+        document.body.className = document
+          .body
+          .className
+          .replace('js-enabled', '');
+    </script>
 
     <script src="/js/govuk-frontend-4.3.1.min.js" defer></script>
-    <script>
-      window
-        .GOVUKFrontend
-        .initAll()
-    </script>
 
-    <script>
-      hljs.highlightAll();
-    </script>
   </body>
 
 </html>

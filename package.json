@@ -41,6 +41,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@govuk-prototype-kit/step-by-step": "^2.1.0",
     "accessible-autocomplete": "^2.0.3",
     "axios": "^0.21.2",
     "basic-auth": "^2.0.1",

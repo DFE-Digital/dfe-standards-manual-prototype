@@ -7,6 +7,12 @@
 // Design examples
 
 @import "design-example/design-example";
+
+
+@import "stepbystep/_step-by-step-navigation.scss";
+@import "stepbystep/_step-by-step-navigation-header.scss";
+@import "stepbystep/_step-by-step-navigation-related.scss";
+
 /////////////////
 // FRONTEND FIXES + UPDATES
 /////////////////
@@ -907,3 +913,27 @@ td, th{padding-left: 10px !important; padding-right: 10px !important; }
 .dfeuk-tag{letter-spacing: 1px; text-transform: uppercase; padding: 6px 10px;}
 
 .govuk-button{width: fit-content}
+
+
+
+
+.app-step-nav-header {
+  @include govuk-font(24, $weight: bold);
+  @include govuk-text-colour;
+
+  position: relative;
+  padding: 10px;
+  background: govuk-colour("light-grey", $legacy: "grey-4");
+  border-bottom: solid 1px govuk-colour("blue");
+  margin-top: govuk-spacing(3);
+
+  @include govuk-media-query($from: tablet) {
+    padding: govuk-spacing(5);
+  }
+}
+
+.app-step-nav-header__part-of {
+  @include govuk-font(19, $weight: bold);
+  display: block;
+}
+
