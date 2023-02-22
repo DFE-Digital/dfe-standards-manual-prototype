@@ -45,8 +45,49 @@
 
 }
 
+.step-by-step-page {
+  .app-pane__side-bar {
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 1 1 auto;
+    width: 220px;
+
+    @include mq($from: desktop) {
+      padding-left: dfeuk-spacing(9);
+    }
+
+    @include mq($until: large-desktop) {
+      width: 200px;
+    }
+
+    @include mq($until: desktop) {
+      display: none;
+    }
+  }
+
+  .app-pane__main-content {
+    -ms-flex: 1 1 100%; // sass-lint:disable-line no-duplicate-properties
+    -ms-flex-direction: column;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: -ms-flexbox; // sass-lint:disable-line no-duplicate-properties
+    display: flex; // sass-lint:disable-line no-duplicate-properties
+    flex: 1 1 100%;
+    flex-direction: column;
+    min-width: 0;
+
+    @include mq($from: desktop) {
+      padding-left: dfeuk-spacing(0);
+    }
+
+  }
+}
+
 // Custom spacing for page headings
 @include mq($until: tablet) {
+
   .app-page-heading,
   .app-lede-text,
   .app-contents-list,

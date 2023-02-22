@@ -5,7 +5,7 @@
   { title: "Service assurance", url: "/service-assurance/" }
 ] %}
 
-<header class="dfeuk-header" role="banner">
+<header class="dfeuk-header {% if stepByStepPage %} dfeuk-header--sbs {% endif %}" role="banner">
   <div class="dfeuk-width-container dfeuk-header__container app-width-container">
     <div class="dfeuk-header__logo">
       <a class="dfeuk-header__link dfeuk-header__link--service " href="/" aria-label="DfE digital service manual homepage">
@@ -46,7 +46,7 @@
       </div>
     </div>
   </div>
-  <nav class="dfeuk-header__navigation app-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+  <nav class="dfeuk-header__navigation app-header__navigation " id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
     <div class="dfeuk-width-container app-width-container">
       <p class="dfeuk-header__navigation-title">
         <span id="label-navigation">Menu</span>
