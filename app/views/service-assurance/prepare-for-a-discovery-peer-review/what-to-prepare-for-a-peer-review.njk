@@ -3,7 +3,7 @@
 {% set pageSection = "Service assurance" %}
 {% set dateUpdated = "February 2023" %}
 {% set backlog_issue_id = "" %}
-{% set stepByStepPage = true %}
+{% set active_block_2 = "active-step" %}
 
 {% extends "includes/sbs-layout.njk" %}
 
@@ -11,14 +11,6 @@
     {% include "service-assurance/_breadcrumb.njk" %}
 {% endblock %}
 
-{% block beforeBody %}
-  <div class="app-step-nav-header">
-    <span class="app-step-nav-header__part-of">Part of</span>
-    <a class="app-step-nav-header__title" href="/service-assurance">
-      Assure your service: step by step
-    </a>
-  </div>
-{% endblock %}
 
 {% block bodyContent %}
 
@@ -53,4 +45,8 @@
 <p>The team will receive a report written by the panel within 3 days. It will include recommendations for next steps and ideas to explore if the discovery is moving to the next phase.</p>
 
 
+{% endblock %}
+
+{% block stepByStep %}
+    {% include "service-assurance/_sbs.njk"%}
 {% endblock %}

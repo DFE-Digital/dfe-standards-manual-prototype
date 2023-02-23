@@ -1,0 +1,27 @@
+{% set pageTitle = "Check what assurance you need for your service" %}
+{% set pageDescription = "Answer some questions to understand the types of assurance and standards you should be working towards." %}
+{% set pageSection = "Service assurance" %}
+{% set dateUpdated = "February 2023" %}
+{% set backlog_issue_id = "" %}
+{% set active_block_1 = "active-step" %}
+
+{% extends "includes/sbs-layout.njk" %}
+
+{% block breadcrumb %}
+    {% include "service-assurance/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+    <a href="/service-assurance/check-what-assurance-you-need/check-service/phase" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Start now
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
+        </svg>
+    </a>
+
+{% endblock %}
+
+{% block stepByStep %}
+    {% include "service-assurance/_sbs.njk"%}
+{% endblock %}

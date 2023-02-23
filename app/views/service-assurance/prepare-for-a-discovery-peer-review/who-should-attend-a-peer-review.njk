@@ -3,7 +3,7 @@
 {% set pageSection = "Service assurance" %}
 {% set dateUpdated = "February 2023" %}
 {% set backlog_issue_id = "" %}
-{% set stepByStepPage = true %}
+{% set active_block_2 = "active-step" %}
 
 {% extends "includes/sbs-layout.njk" %}
 
@@ -11,14 +11,7 @@
     {% include "service-assurance/_breadcrumb.njk" %}
 {% endblock %}
 
-{% block beforeBody %}
-  <div class="app-step-nav-header">
-    <span class="app-step-nav-header__part-of">Part of</span>
-    <a class="app-step-nav-header__title" href="/service-assurance">
-      Assure your service: step by step
-    </a>
-  </div>
-{% endblock %}
+
 
 {% block bodyContent %}
 
@@ -33,4 +26,8 @@
 <p>But bring the people you feel have the most knowledge of your discovery. This might be the whole team.</p>
 
 
+{% endblock %}
+
+{% block stepByStep %}
+    {% include "service-assurance/_sbs.njk"%}
 {% endblock %}

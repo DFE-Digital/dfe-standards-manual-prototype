@@ -1,0 +1,44 @@
+{% set pageTitle = "Book a discovery peer review" %}
+{% set pageDescription = " " %}
+{% set pageSection = "Service assurance" %}
+{% set dateUpdated = "February 2023" %}
+{% set backlog_issue_id = "" %}
+{% set active_block_3 = "active-step" %}
+
+{% extends "includes/sbs-layout.njk" %}
+
+{% block breadcrumb %}
+    {% include "service-assurance/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+    <h2 class="govuk-heading-m">When to book</h2>
+
+    <p>Most discoveries are around 12 weeks long.</p>
+
+    <p>You should plan to book your peer review so that it happens a few weeks before the end of discovery.</p>
+
+    <p>You need to give at least 5 weeks notice to allow the Service Assessment team time to arrange the peer review panel.</p>
+
+    <h2 class="govuk-heading-m">How to book</h2>
+
+    <p>Only Department for Education staff can book a discovery peer review online.</p>
+
+    <div class="dfeuk-action-link">
+        <a class="dfeuk-action-link__link" href="https://request-manage-disco-pr.herokuapp.com/sprint-3/request/" target="_blank">
+            <svg class="dfeuk-icon dfeuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="dfeuk-action-link__text">Book a peer review online</span>
+        </a>
+    </div>
+
+    <p>Once your request has been submitted, you'll also be able to <a href="/service-assurance/book-a-discovery-peer-review/manage">manage your request online</a>.</p>
+
+{% endblock %}
+
+{% block stepByStep %}
+    {% include "service-assurance/_sbs.njk"%}
+{% endblock %}

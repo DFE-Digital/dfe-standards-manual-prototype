@@ -3,7 +3,7 @@
 {% set pageSection = "Service assurance" %}
 {% set dateUpdated = "February 2023" %}
 {% set backlog_issue_id = "" %}
-{% set stepByStepPage = true %}
+{% set active_block_2 = "active-step" %}
 
 {% extends "includes/sbs-layout.njk" %}
 
@@ -11,14 +11,7 @@
     {% include "service-assurance/_breadcrumb.njk" %}
 {% endblock %}
 
-{% block beforeBody %}
-  <div class="app-step-nav-header">
-    <span class="app-step-nav-header__part-of">Part of</span>
-    <a class="app-step-nav-header__title" href="/service-assurance">
-      Assure your service: step by step
-    </a>
-  </div>
-{% endblock %}
+
 
 {% block bodyContent %}
 
@@ -27,6 +20,16 @@
 <p> It’s a way to get feedback and recommendations at the end of this phase. </p>
 
 <p> It's not an assessment. There are no assessments at discovery. </p>
+
+   <div class="dfeuk-action-link">
+        <a class="dfeuk-action-link__link" href="/service-assurance/book-a-discovery-peer-review/book">
+            <svg class="dfeuk-icon dfeuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="dfeuk-action-link__text">Book and manage a discovery peer review</span>
+        </a>
+    </div>
 
 <h2 class="govuk-heading-m">Why have one</h2>
 
@@ -47,9 +50,12 @@
 
  <h2 class="govuk-heading-m">When to book</h2>
 
-<p>When you start your discovery you should plan to book your peer review so that it happens near the end of discovery.</p>
+<p>When you start your discovery you should plan to <a href="/service-assurance/book-a-discovery-peer-review/book">book your peer review</a> so that it happens near the end of discovery.</p>
 
 <p>However, you should request this at least 5 weeks in advance so the Service Assessment team has time to arrange a panel. 
 </p>
 
+{% endblock %}
+{% block stepByStep %}
+    {% include "service-assurance/_sbs.njk"%}
 {% endblock %}

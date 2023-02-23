@@ -19,8 +19,11 @@ const locals = require('./app/locals');
 const routing = require('./middleware/routing');
 const PageIndex = require('./middleware/page-index');
 const { getRandomValues } = require('crypto');
-
+const session = require('express-session')
+const bodyParser = require('body-parser')
 const pageIndex = new PageIndex(config);
+
+var cookieParser = require('cookie-parser');
 
 // Initialise applications
 const app = express();
@@ -90,7 +93,42 @@ var addNunjucksFilters = function (env) {
 
 addNunjucksFilters(env)
 
+app.set('trust proxy', 1) // trust first proxy
 
+app.use(cookieParser());
+    var MemoryStore =session.MemoryStore;
+    app.use(session({
+        name : 'standardsmanual',
+        secret: "dops-sess-fh82hv3893ef3rfgh4j545g3r",
+        resave: true,
+        store: new MemoryStore(),
+        saveUninitialized: true
+}));
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+
+
+app.post('/service/assurance/check', (req, res) => {
+
+  if(req.body.phase === "Discovery")
+  {
+    req.session.outcome = "1"
+    return res.redirect('/service-assurance/check-what-assurance-you-need/check-service/outcome')
+  }
+
+  return res.redirect('/service-assurance/check-what-assurance-you-need/check')
+
+});
+
+app.get('/service-assurance/check-what-assurance-you-need/check-service/outcome', (req, res) => {
+
+  var outcome = req.session.outcome;
+
+    return res.render('service-assurance/check-what-assurance-you-need/check-service/outcome',{outcome})
+});
 
 // Render standalone design examples
 app.get('/design-example/:group/:item/:type', (req, res) => {

@@ -1,0 +1,68 @@
+{% set pageTitle = "Types of assurance" %}
+{% set pageDescription = " " %}
+{% set pageSection = "Service assurance" %}
+{% set dateUpdated = "February 2023" %}
+{% set backlog_issue_id = "" %}
+{% set active_block_1 = "active-step" %}
+
+{% extends "includes/sbs-layout.njk" %}
+
+{% block breadcrumb %}
+    {% include "service-assurance/_breadcrumb.njk" %}
+{% endblock %}
+
+
+
+{% block bodyContent %}
+
+<p>There are 3 types of assurance which you can use to make sure we're spending public money or building the right thing, in the right way.</p>
+
+<h2 class="govuk-heading-m">Local assurance</h2>
+
+<p>Local assurances are methods you use in your team to make sure you're doing the right thing.</p>
+
+<p>Some examples of team assurance are:</p>
+
+<ul>
+    <li>design crits</li>
+    <li>2i on content</li>
+    <li>accessibility compliance using checklists</li>
+    <li>automated tests when code is changed and deployed</li>
+    <li>RAG reviews</li>
+</ul>
+
+<h2 class="govuk-heading-m">Departmental assurance</h2>
+
+<p>Outside of your team, department-level assurance methods are used to make sure you're following the required standards.</p>
+
+<p>These are usually required to ensure we're meeting our governance requirements as a government department.</p>
+
+<p>Some examples of departmental assurance are:</p>
+
+<ul>
+    <li>discovery peer reviews</li>
+    <li>DfE panel service assessments</li>
+    <li>Show and tells</li>
+    <li>IT health check</li>
+    <li>Spend control review</li>
+    <li>mock assessments</li>
+</ul>
+
+<h2 class="govuk-heading-m">Independent assurance</h2>
+
+<p>Using independent assurance methods outside of DfE provides an even greater level of assurance and in some instances is required.</p>
+
+<p>Some examples of independent assurance are:</p>
+
+<ul>
+    <li>cross-government panel service assessment</li>
+    <li>security audits or penetration testing</li>
+    <li>accessibility audit</li>
+    <li>cross-government peer reviews or design crits</li>
+</ul>
+
+{% endblock %}
+
+{% block stepByStep %}
+    {% include "service-assurance/_sbs.njk"%}
+{% endblock %}

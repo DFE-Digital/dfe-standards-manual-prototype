@@ -55,25 +55,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2V3LRNYBJ"></script>
 
     <script src="/js/main.min.js" defer></script>
-    <!-- Cookie consent -->
-        <script src="/js/cookies.min.js" data-policy-url="/cookie-policy" defer></script>
+
+    <script src="/js/cookies.min.js" data-policy-url="/cookie-policy" defer></script>
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 
     <link rel="icon" sizes="192x192" href="/assets/govuk-logotype-crown.png">
-
-    <meta property="og:url" content="{{ BASE_URL }}"/>
-    <meta property="og:site_name" content="DFE User Centered Design"/>
-    <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} - Apply the Service Standard in DfE{% else %}Apply the Service Standard in DfE{% endif %}"/>
-    <meta property="og:description" content="{% if pageDescription %}{{pageDescription}}{% else %}A framework of principles, guidance, and standards to enable and support teams to deliver joined-up, effective, user-centred services for users of Department for Education services.{% endif %}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:locale" content="en_GB"/>
-    <meta property="og:image" content='{% if BASE_URL %}{{ BASE_URL }}{% endif %}assets/open-graph-new.png'/>
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@dfe_digital">
-    <meta name="twitter:creator" content="@dfe_digital">
-    <meta name="twitter:image:alt" content="Apply the Service Standard in DfE">
 
   </head>
 
@@ -114,14 +101,14 @@
     </nav>
     {% include "includes/_header-prototype.njk" %}
 
-{% if not stepByStepPage %}
-    {% block breadcrumb %}
-      {{ breadcrumb({
+    {% if not stepByStepPage %}
+      {% block breadcrumb %}
+        {{ breadcrumb({
         href: "/",
         text: "Home",
         classes: "app-breadcrumb"
       }) }}
-    {% endblock %}
+      {% endblock %}
     {% endif %}
 
     {% block outerBody %}{% endblock %}
@@ -132,11 +119,10 @@
 
     {% if pageLayout != "Homepage" %}
       <div class="dfeuk-width-container app-width-container">
-  {% block beforeBody %}
+        {% block beforeBody %}
 
-            {% endblock%}
-        <main class="dfeuk-main-wrapper app-main-wrapper" id="maincontent" role="main">
-        
+          {% endblock%}
+          <main class="dfeuk-main-wrapper app-main-wrapper" id="maincontent" role="main">
 
             {% block body %}{% endblock %}
           </main>
@@ -147,12 +133,9 @@
 
       {% include "includes/_footer.njk" %}
 
+      <script src="/js/govuk-frontend-4.3.1.min.js" defer></script>
 
-  <script src="/js/govuk-frontend-4.3.1.min.js" defer></script>
-
-    {% block pageScripts %}{% endblock %}
-
-  
+      {% block pageScripts %}{% endblock %}
 
     </body>
 

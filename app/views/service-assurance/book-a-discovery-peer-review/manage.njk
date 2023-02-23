@@ -1,0 +1,43 @@
+{% set pageTitle = "Manage your peer review" %}
+{% set pageDescription = " " %}
+{% set pageSection = "Service assurance" %}
+{% set dateUpdated = "February 2023" %}
+{% set backlog_issue_id = "" %}
+{% set active_block_3 = "active-step" %}
+
+{% extends "includes/sbs-layout.njk" %}
+
+{% block breadcrumb %}
+  {% include "service-assurance/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+  <p>Once you've submitted a request to book a peer review, the Service Assessment Team will check it.</p>
+
+  <p>These checks can take about 3 working days. You'll get an email telling you what will happen next.</p>
+
+  <h2 class="govuk-heading-m">If your request is accepted</h2>
+
+  <p>You'll be able to manage the request online, for example:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>you'll be asked to choose a date for the review</li>
+    <li>you'll be able to add links to artefacts</li>
+    <li>the Service Assessment Team will update the request with details of the peer reviewers</li>
+    <li>you'll be able to add details of the team attending the peer review</li>
+    <li>you'll be able to assign responsibility of the peer review to someone else</li>
+  </ul>
+
+  <h2 class="govuk-heading-m">If your request is rejected</h2>
+
+  <p>The Service Assessment Team will tell you why the request has been rejected.</p>
+
+  <p>You may be asked to <a href="/service-assurance/check-what-assurance-you-need/types-of-assurance">assure your discovery another way</a>, if it is not suitable for a peer review. </p>
+
+
+{% endblock %}
+
+{% block stepByStep %}
+  {% include "service-assurance/_sbs.njk"%}
+{% endblock %}

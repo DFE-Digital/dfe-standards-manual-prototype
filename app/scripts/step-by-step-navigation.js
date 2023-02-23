@@ -52,6 +52,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.bindToggleForSteps(stepNavTracker)
     this.bindToggleShowHideAllButton(stepNavTracker)
     this.bindComponentLinkClicks(stepNavTracker)
+
+    this.setActiveStepClass()
+    
   }
 
   AppStepNav.prototype.getTextForInsertedElements = function () {
@@ -276,6 +279,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       return
     }
 
+
     var loaded = this.loadFromSessionStorage(this.$module.sessionStoreLink)
     var activeParent = this.$module.querySelectorAll('.' + this.$module.activeLinkClass)[0]
     var activeChild = activeParent.firstChild
@@ -312,6 +316,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   }
 
   AppStepNav.prototype.setActiveStepClass = function () {
+
+
+
+
     // remove the 'active/open' state from all steps
     var allActiveSteps = this.$module.querySelectorAll('.' + this.$module.activeStepClass)
     for (var i = 0; i < allActiveSteps.length; i++) {
@@ -507,6 +515,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
     }
   }
+
+
 
   Modules.AppStepNav = AppStepNav
 })(window.GOVUK.Modules)

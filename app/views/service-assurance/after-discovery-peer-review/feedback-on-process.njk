@@ -1,0 +1,76 @@
+{% set pageTitle = "Give feedback on the discovery peer review process" %}
+{% set pageDescription = " " %}
+{% set pageSection = "Service assurance" %}
+{% set dateUpdated = "February 2023" %}
+{% set backlog_issue_id = "" %}
+{% set active_block_4 = "active-step" %}
+
+{% extends "includes/sbs-layout.njk" %}
+
+{% block breadcrumb %}
+    {% include "service-assurance/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+    <p>After the discovery team has received the report, everyone in the peer review process will get a survey to complete.</p>
+
+    <p>This gives everyone the opportunity to give feedback on the whole process from start to finish.</p>
+
+    <p>Giving feedback helps improve the process for future teams having a discovery peer review.</p>
+
+     <h2 class="govuk-heading-m">What the survey measures</h2>
+
+    <p>We measure 3 user satisfaction scores concerning:</p>
+
+     <ul class="govuk-list govuk-list--bullet">
+    <li>the booking process</li>
+    <li>the peer review itself</li>
+    <li>the support and guidance around the peer review</li>
+  </ul>
+
+
+
+    <h2 class="govuk-heading-s">Current user satisfaction scores</h2>
+
+    <p>These scores are based on 19 completed peer review surveys completed between 11 January 2022 and 21 February 2023</p>
+
+    <ul class="dfeuk-grid-row dfeuk-card-group">
+        <li class="dfeuk-grid-column-one-third dfeuk-card-group__item">
+
+            <div class="dfeuk-card">
+                <div class="dfeuk-card__content">
+                    <p class="dfeuk-heading-xl dfeuk-u-font-size-64 dfeuk-u-margin-bottom-1">95%</p>
+                    <p  class="dfeuk-u-font-weight-normal dfeuk-u-font-size-19 dfeuk-link--no-visited-state">Booking process</p>
+                </div>
+            </div>
+
+        </li>
+         <li class="dfeuk-grid-column-one-third dfeuk-card-group__item">
+
+            <div class="dfeuk-card">
+                <div class="dfeuk-card__content">
+                    <p class="dfeuk-heading-xl dfeuk-u-font-size-64 dfeuk-u-margin-bottom-1">90%</p>
+                    <p class="dfeuk-u-font-weight-normal dfeuk-u-font-size-19 dfeuk-link--no-visited-state">Peer review</p>
+                </div>
+            </div>
+
+        </li>
+
+         <li class="dfeuk-grid-column-one-third dfeuk-card-group__item">
+
+            <div class="dfeuk-card">
+                <div class="dfeuk-card__content">
+                    <p class="dfeuk-heading-xl dfeuk-u-font-size-64 dfeuk-u-margin-bottom-1">100%</p>
+                    <p class="dfeuk-u-font-weight-normal dfeuk-u-font-size-19 dfeuk-link--no-visited-state">Support</p>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+
+{% endblock %}
+
+{% block stepByStep %}
+    {% include "service-assurance/_sbs.njk"%}
+{% endblock %}
