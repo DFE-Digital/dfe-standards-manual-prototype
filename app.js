@@ -111,6 +111,12 @@ app.use(bodyParser.urlencoded({
 }))
 
 
+app.get('/download/:id', function(req, res){
+  var id = req.params.id;
+  const file = `${__dirname}/public/assets/`+id;
+  res.download(file);
+});
+
 app.post('/service/assurance/check', (req, res) => {
 
   if(req.body.phase === "Discovery")
@@ -196,6 +202,8 @@ app.get('/sitemap.xml', (_, res) => {
   res.set({ 'Content-Type': 'application/xml' });
   res.render('sitemap.xml');
 });
+
+
 
 // Render robots.txt in text format
 app.get('/robots.txt', (_, res) => {
