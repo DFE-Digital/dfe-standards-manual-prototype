@@ -4,7 +4,7 @@
 {% set backlog_issue_id = "" %}
 {% set active_block_1 = "active-step" %}
 
-{% extends "includes/form-layout.njk" %}
+{% extends "includes/sbs-layout.njk" %}
 
 {% block breadcrumb %}
     {% include "service-assurance/_breadcrumb.njk" %}
@@ -28,3 +28,7 @@
         {% endif%}
 
     {% endblock %}
+
+    {% block stepByStep %}
+    {% include "service-assurance/_sbs.njk"%}
+{% endblock %}
