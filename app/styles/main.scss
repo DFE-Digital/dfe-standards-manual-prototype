@@ -1,5 +1,6 @@
 @import "node_modules/govuk-frontend/govuk/all";
 @import "node_modules/dfeuk-frontend/packages/dfefrontend";
+@import "dfefrontend";
 
 // App specific styles
 @import "app/app";
@@ -975,3 +976,28 @@ thead>tr {
 
 
 .dfeuk-inset-text{background: $color_dfeuk-grey-5; max-width: 100%;   margin-top: govuk-spacing(6);   margin-bottom: govuk-spacing(6); }
+
+
+ .custom-dfe-panel {
+  border: 1px solid #b1b4b6;
+  
+}
+ .custom-dfe-panel--title {
+  padding: 15px;
+}
+.custom-dfe-panel--content {
+  border-top: 1px solid #b1b4b6;
+  padding: 15px;
+}
+.custom-dfe-section{ margin-bottom: 60px;}
+
+ code{background: #ffeff0;
+word-wrap: break-word;
+box-decoration-break: clone;
+padding: .1rem .3rem .2rem;
+border-radius: .2rem;
+ }
+
+ .dfeuk-hero .dfeuk-hero--border {
+  border-top: none;
+}
